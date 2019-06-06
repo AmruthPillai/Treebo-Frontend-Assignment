@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios';
 
-import { Container, ExpansionPanel, ExpansionPanelSummary, ExpansionPanelDetails, Typography, Box } from '@material-ui/core';
+import { Container, ExpansionPanel, ExpansionPanelSummary, ExpansionPanelDetails, Typography, Box, List, ListItem, ListItemText, Divider } from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 import { connect } from 'react-redux'
@@ -55,9 +55,43 @@ class Hotels extends Component {
                       </Box>
                     </Box>
                   </ExpansionPanelSummary>
+                  <Divider />
                   <ExpansionPanelDetails>
-                    <Typography>
-                    </Typography>
+                    <Box width="50%" display="flex" flexDirection="row">
+                      <Box flexGrow="1">
+                        <List dense={true}>
+                          <Typography variant="caption">Policies</Typography>
+                          {hotel.details ?
+                            hotel.details.policies.map(policy => {
+                              return (
+                                <div key={Math.random()}>
+                                  <ListItem button>
+                                    <ListItemText primary={policy}></ListItemText>
+                                  </ListItem>
+                                </div>
+                              )
+                            })
+                            : <Typography></Typography>}
+                        </List>
+                      </Box>
+
+                      <Box flexGrow="1">
+                        <List dense={true}>
+                          <Typography variant="caption">Essentials</Typography>
+                          {hotel.details ?
+                            hotel.details.essentials.map(essential => {
+                              return (
+                                <div key={Math.random()}>
+                                  <ListItem button>
+                                    <ListItemText primary={essential}></ListItemText>
+                                  </ListItem>
+                                </div>
+                              )
+                            })
+                            : <Typography></Typography>}
+                        </List>
+                      </Box>
+                    </Box>
                   </ExpansionPanelDetails>
                 </ExpansionPanel>
               )
