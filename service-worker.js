@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Treebo-Frontend-Assignment/precache-manifest.8d2443fdf8ebaa3d08bf255282436ad6.js"
+  "/Treebo-Frontend-Assignment/precache-manifest.569b0db117c65f58d25ed63275d71157.js"
 );
 
 self.addEventListener('message', (event) => {
