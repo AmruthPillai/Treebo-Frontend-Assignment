@@ -1,10 +1,13 @@
-/* Global Styles */
+/* Global Helper Styles */
+
 .danger-text {
-  color: red;
+  color: #ef5350;
 }
+
 .text-grey {
-  color: #888;
+  color: #616161;
 }
+
 .justify-content-center {
   justify-content: center;
 }
