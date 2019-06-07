@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Treebo-Frontend-Assignment/static/css/main.efdd8144.chunk.css",
+    "main.css": "/Treebo-Frontend-Assignment/static/css/main.d1dec1f3.chunk.css",
     "main.js": "/Treebo-Frontend-Assignment/static/js/main.70f43fbf.chunk.js",
     "main.js.map": "/Treebo-Frontend-Assignment/static/js/main.70f43fbf.chunk.js.map",
     "runtime~main.js": "/Treebo-Frontend-Assignment/static/js/runtime~main.1d5d36b1.js",
@@ -8,8 +8,8 @@
     "static/js/2.082ccb32.chunk.js": "/Treebo-Frontend-Assignment/static/js/2.082ccb32.chunk.js",
     "static/js/2.082ccb32.chunk.js.map": "/Treebo-Frontend-Assignment/static/js/2.082ccb32.chunk.js.map",
     "index.html": "/Treebo-Frontend-Assignment/index.html",
-    "precache-manifest.4eb349cd5611c1916801ae89f32a4259.js": "/Treebo-Frontend-Assignment/precache-manifest.4eb349cd5611c1916801ae89f32a4259.js",
+    "precache-manifest.e22f653114daca4392b3089af2636419.js": "/Treebo-Frontend-Assignment/precache-manifest.e22f653114daca4392b3089af2636419.js",
     "service-worker.js": "/Treebo-Frontend-Assignment/service-worker.js",
-    "static/css/main.efdd8144.chunk.css.map": "/Treebo-Frontend-Assignment/static/css/main.efdd8144.chunk.css.map"
+    "static/css/main.d1dec1f3.chunk.css.map": "/Treebo-Frontend-Assignment/static/css/main.d1dec1f3.chunk.css.map"
   }
 }
