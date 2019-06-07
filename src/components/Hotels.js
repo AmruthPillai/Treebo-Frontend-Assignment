@@ -9,13 +9,13 @@ import { getHotels, embedPrices, getDetails } from '../actions/hotelActions';
 
 class Hotels extends Component {
   async componentDidMount() {
-    let hotels = await axios.get('http://www.mocky.io/v2/5a7f23442e00005000b56873')
+    let hotels = await axios.get('https://www.mocky.io/v2/5a7f23442e00005000b56873')
     this.props.getHotels(hotels.data.data);
 
-    let prices = await axios.get('http://www.mocky.io/v2/5a7f24f02e00005200b56875')
+    let prices = await axios.get('https://www.mocky.io/v2/5a7f24f02e00005200b56875')
     this.props.embedPrices(prices.data.data);
 
-    let details = await axios.get('http://www.mocky.io/v2/5a7f265b2e00005d00b56877')
+    let details = await axios.get('https://www.mocky.io/v2/5a7f265b2e00005d00b56877')
     this.props.getDetails(details.data.data)
   }
 
