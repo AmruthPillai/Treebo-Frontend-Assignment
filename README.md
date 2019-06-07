@@ -1,68 +1,21 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Treebo Hotels Frontend Assignment
 
-## Available Scripts
+A React/Redux frontend application that uses Material UI to display a group of hotels, their locations, prices and amenities upon futher navigation.
 
-In the project directory, you can run:
+### Demo
 
-### `npm start`
+<img src="https://i.imgur.com/NoAP36K.gif" alt="Demo" width="320" />
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Requirements
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+1. Create a generic hotel list page using the following api: http://www.mocky.io/v2/5a7f23442e00005000b56873
+2. Show only the cheapest price for each hotel on the list page using this api: http://www.mocky.io/v2/5a7f24f02e00005200b56875 (null prices mean sold out)
+3. On clicking a hotel, display a hotel detail page with details from this api: http://www.mocky.io/v2/5a7f265b2e00005d00b56877 along with the respective room prices using the above price api.
 
-### `npm test`
+### Points of Interest
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+1. Repo setup and folder structure
+2. Identification of components that should carry state vs components that are only concerned with display (smart vs dumb components)
+3. Proper use of methods to fetch data, push into state, etc
+4. State management is left completely upto you (however, would prefer to see redux)
+5. Styling best practises and principles. (You may copy the design from the Treebo Website or use any of your own. Only create the listing and detail pages).
