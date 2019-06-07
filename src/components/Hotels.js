@@ -34,64 +34,11 @@ class Hotels extends Component {
                 <ExpansionPanel key={hotel.id}>
                   <ExpansionPanelSummary
                     expandIcon={<ExpandMoreIcon />}>
-                    <Box display="flex" flexDirection="column">
-                      <Typography variant="h6">{hotel.name}</Typography>
-                      <Typography style={{ fontSize: 14 }} className="grey-text">
-                        {hotel.locality ? hotel.locality + ', ' : ''}{hotel.city ? hotel.city : ''}
-                      </Typography>
-
-                      <Box mt={2}>
-                        {hotel.price ? (
-                          this.getMinimumFromObj(hotel.price) !== Infinity ? (
-                            <Typography style={{ fontSize: 14 }} variant="subtitle2">
-                              Starting from ₹{this.getMinimumFromObj(hotel.price)}
-                            </Typography>
-                          ) : (
-                              <Typography className="danger-text" style={{ fontSize: 14 }} variant="subtitle2">
-                                Out of Stock
-                            </Typography>
-                            )
-                        ) : null}
-                      </Box>
-                    </Box>
+                    {this._buildSummary(hotel)}
                   </ExpansionPanelSummary>
                   <Divider />
                   <ExpansionPanelDetails>
-                    <Box width="50%" display="flex" flexDirection="row">
-                      <Box flexGrow="1">
-                        <List dense={true}>
-                          <Typography variant="caption">Policies</Typography>
-                          {hotel.details ?
-                            hotel.details.policies.map(policy => {
-                              return (
-                                <div key={Math.random()}>
-                                  <ListItem button>
-                                    <ListItemText primary={policy}></ListItemText>
-                                  </ListItem>
-                                </div>
-                              )
-                            })
-                            : <Typography></Typography>}
-                        </List>
-                      </Box>
-
-                      <Box flexGrow="1">
-                        <List dense={true}>
-                          <Typography variant="caption">Essentials</Typography>
-                          {hotel.details ?
-                            hotel.details.essentials.map(essential => {
-                              return (
-                                <div key={Math.random()}>
-                                  <ListItem button>
-                                    <ListItemText primary={essential}></ListItemText>
-                                  </ListItem>
-                                </div>
-                              )
-                            })
-                            : <Typography></Typography>}
-                        </List>
-                      </Box>
-                    </Box>
+                    {this._buildDetails(hotel)}
                   </ExpansionPanelDetails>
                 </ExpansionPanel>
               )
@@ -100,6 +47,82 @@ class Hotels extends Component {
         </Container>
       </Box>
     )
+  }
+
+  _buildDetails(hotel) {
+    return <Box width="60%" display="flex" flexDirection="row">
+      {this._buildPriceList(hotel)}
+      {this._buildPolicyList(hotel)}
+      {this._buildEssentialsList(hotel)}
+    </Box>;
+  }
+
+  _buildEssentialsList(hotel) {
+    return <Box flexGrow="1">
+      <List dense={true}>
+        <Typography variant="caption">Essentials</Typography>
+        {hotel.details ?
+          hotel.details.essentials.map(essential => {
+            return (<div key={Math.random()}>
+              <ListItem>
+                <ListItemText primary={essential}></ListItemText>
+              </ListItem>
+            </div>);
+          })
+          : <Typography></Typography>}
+      </List>
+    </Box>;
+  }
+
+  _buildPolicyList(hotel) {
+    return <Box flexGrow="1">
+      <List dense={true}>
+        <Typography variant="caption">Policies</Typography>
+        {hotel.details ?
+          hotel.details.policies.map(policy => {
+            return (<div key={Math.random()}>
+              <ListItem>
+                <ListItemText primary={policy}></ListItemText>
+              </ListItem>
+            </div>);
+          })
+          : <Typography></Typography>}
+      </List>
+    </Box>;
+  }
+
+  _buildPriceList(hotel) {
+    return <Box flexGrow="1">
+      <List dense={true}>
+        <Typography variant="caption">Room Prices</Typography>
+        {hotel.price ?
+          Object.keys(hotel.price).map(key => {
+            return (<div key={Math.random()}>
+              <ListItem button>
+                <ListItemText primary={key.charAt(0).toUpperCase() + key.slice(1)} secondary={hotel.price[key] ? ('₹' + hotel.price[key]) : 'Out of Stock'}></ListItemText>
+              </ListItem>
+            </div>);
+          })
+          : <Typography></Typography>}
+      </List>
+    </Box>;
+  }
+
+  _buildSummary(hotel) {
+    return <Box display="flex" flexDirection="column">
+      <Typography variant="h6">{hotel.name}</Typography>
+      <Typography style={{ fontSize: 14 }} className="grey-text">
+        {hotel.locality ? hotel.locality + ', ' : ''}{hotel.city ? hotel.city : ''}
+      </Typography>
+
+      <Box mt={2}>
+        {hotel.price ? (this.getMinimumFromObj(hotel.price) !== Infinity ? (<Typography style={{ fontSize: 14 }} variant="subtitle2">
+          Starting from ₹{this.getMinimumFromObj(hotel.price)}
+        </Typography>) : (<Typography className="danger-text" style={{ fontSize: 14 }} variant="subtitle2">
+          Out of Stock
+        </Typography>)) : null}
+      </Box>
+    </Box>;
   }
 }
 
