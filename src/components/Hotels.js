@@ -50,7 +50,7 @@ class Hotels extends Component {
   }
 
   _buildDetails(hotel) {
-    return <Box width="60%" display="flex" flexDirection="row">
+    return <Box width="100%" display="flex" flexDirection="row">
       {this._buildPriceList(hotel)}
       {this._buildPolicyList(hotel)}
       {this._buildEssentialsList(hotel)}
