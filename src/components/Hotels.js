@@ -100,7 +100,7 @@ class Hotels extends Component {
             return (<div key={Math.random()}>
               <ListItem button>
                 <ListItemText primary={key.charAt(0).toUpperCase() + key.slice(1)}
-                  secondary={hotel.price[key] ? ('₹' + hotel.price[key]) : 'Out of Stock'}></ListItemText>
+                  secondary={hotel.price[key] ? ('₹' + hotel.price[key]) : 'Sold Out'}></ListItemText>
               </ListItem>
             </div>);
           })
@@ -120,7 +120,7 @@ class Hotels extends Component {
         {hotel.price ? (this.getMinimumFromObj(hotel.price) !== Infinity ? (<Typography style={{ fontSize: 14 }} variant="subtitle2">
           Starting from ₹{this.getMinimumFromObj(hotel.price)}
         </Typography>) : (<Typography className="danger-text" style={{ fontSize: 14 }} variant="subtitle2">
-          Out of Stock
+          Sold Out
         </Typography>)) : null}
       </Box>
     </Box>;
