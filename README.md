@@ -2,6 +2,8 @@
 
 A React/Redux frontend application that uses Material UI to display a group of hotels, their locations, prices and amenities upon futher navigation.
 
+**Try the app live: https://amruthpillai.github.io/Treebo-Frontend-Assignment/**
+
 ### Demo
 
 <img src="https://i.imgur.com/NoAP36K.gif" alt="Demo" width="320" />
