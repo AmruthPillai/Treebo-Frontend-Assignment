@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "36328bbb0d0199929b39e66fe57455cb",
+    "revision": "fa588dcd67fc4e88f496d2e8e418289b",
     "url": "/Treebo-Frontend-Assignment/index.html"
   },
   {
-    "revision": "18a41296444fbb0a5aed",
+    "revision": "7b49163509b18eb1c677",
     "url": "/Treebo-Frontend-Assignment/static/css/main.efdd8144.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Treebo-Frontend-Assignment/static/js/2.082ccb32.chunk.js"
   },
   {
-    "revision": "18a41296444fbb0a5aed",
-    "url": "/Treebo-Frontend-Assignment/static/js/main.0cbfb3a0.chunk.js"
+    "revision": "7b49163509b18eb1c677",
+    "url": "/Treebo-Frontend-Assignment/static/js/main.70f43fbf.chunk.js"
   },
   {
     "revision": "35a806f9ecfb4ac5c940",
