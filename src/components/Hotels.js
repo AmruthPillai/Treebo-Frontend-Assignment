@@ -60,7 +60,7 @@ class Hotels extends Component {
   _buildEssentialsList(hotel) {
     return <Box flexGrow="1">
       <List dense={true}>
-        <Typography variant="caption">Essentials</Typography>
+        <Typography variant="caption" className="text-grey">Essentials</Typography>
         {hotel.details ?
           hotel.details.essentials.map(essential => {
             return (<div key={Math.random()}>
@@ -77,7 +77,7 @@ class Hotels extends Component {
   _buildPolicyList(hotel) {
     return <Box flexGrow="1">
       <List dense={true}>
-        <Typography variant="caption">Policies</Typography>
+        <Typography variant="caption" className="text-grey">Policies</Typography>
         {hotel.details ?
           hotel.details.policies.map(policy => {
             return (<div key={Math.random()}>
@@ -94,12 +94,13 @@ class Hotels extends Component {
   _buildPriceList(hotel) {
     return <Box flexGrow="1">
       <List dense={true}>
-        <Typography variant="caption">Room Prices</Typography>
+        <Typography variant="caption" className="text-grey">Room Prices</Typography>
         {hotel.price ?
           Object.keys(hotel.price).map(key => {
             return (<div key={Math.random()}>
               <ListItem button>
-                <ListItemText primary={key.charAt(0).toUpperCase() + key.slice(1)} secondary={hotel.price[key] ? ('₹' + hotel.price[key]) : 'Out of Stock'}></ListItemText>
+                <ListItemText primary={key.charAt(0).toUpperCase() + key.slice(1)}
+                  secondary={hotel.price[key] ? ('₹' + hotel.price[key]) : 'Out of Stock'}></ListItemText>
               </ListItem>
             </div>);
           })
